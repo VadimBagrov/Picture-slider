@@ -22,6 +22,15 @@ downBtn.addEventListener('click', () => {
     changeSlide('down')
 }) //Если кликаю вниз то вызываю функцию с параметром down
 
+document.addEventListener('keydown' , event => {
+    if (event.key === 'ArrowUp') {
+        changeSlide('up')
+    } else if (event.key === 'ArrowDown') {
+        changeSlide('down')
+    }
+}) //Перелистывание слайдов кнопками клаввиатуры
+//event keydown это доступ к клавишам которым мы нажимаем
+
 function changeSlide(direction) {
     if (direction === 'up') {
         activeSlideIndex++
